@@ -1,6 +1,6 @@
 ---
 name: ffmpeg-toolkit
-description: Video/audio processing with ffmpeg. Use for conversions, resizing, GIFs, audio extraction, compression, subtitles, or when user mentions YouTube, Instagram, TikTok optimization.
+description: ffmpeg recipes and best practices: convert, concatenate, merge, resize, compress, GIF creation, audio extraction, subtitles, optimize for social platforms.
 ---
 
 # FFmpeg Toolkit
@@ -159,15 +159,43 @@ ffmpeg -i input.mp4 -ss 00:00:05 -t 10 -c copy output.mp4
 ```
 
 **Concatenate videos:**
-```bash
-# Create file list
-echo "file 'video1.mp4'" > list.txt
-echo "file 'video2.mp4'" >> list.txt
-echo "file 'video3.mp4'" >> list.txt
 
-# Concatenate
-ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4
+Choose method based on format and compatibility:
+
+**Method 1: Concat Protocol (Preferred - No temporary files needed)**
+```bash
+# For MPEG formats: .ts, .mpg, .mpeg, .mp3, .aac, etc.
+# Direct concatenation without creating list file
+ffmpeg -i "concat:file1.mp3|file2.mp3|file3.mp3" -c copy output.mp3
+ffmpeg -i "concat:video1.ts|video2.ts|video3.ts" -c copy output.ts
+
+# Works with: TS, MPEG-1, MPEG-2, MP3, AAC
+# Does NOT work with: MP4, MOV, MKV (use Method 2 instead)
 ```
+
+**Method 2: Concat Demuxer (For MP4, MOV, MKV)**
+```bash
+# Use process substitution to avoid temporary files
+ffmpeg -f concat -safe 0 -i <(printf "file '%s'\n" video1.mp4 video2.mp4 video3.mp4) -c copy output.mp4
+
+# If shell doesn't support process substitution:
+printf "file '%s'\n" video1.mp4 video2.mp4 video3.mp4 > list.txt
+ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4
+rm list.txt
+```
+
+**Method 3: Concat Filter (When re-encoding is acceptable)**
+```bash
+# Use when videos have different codecs/resolutions
+ffmpeg -i video1.mp4 -i video2.mp4 -i video3.mp4 \
+  -filter_complex "[0:v][0:a][1:v][1:a][2:v][2:a]concat=n=3:v=1:a=1[v][a]" \
+  -map "[v]" -map "[a]" output.mp4
+```
+
+**Format Decision Guide:**
+- `.mp3`, `.aac`, `.ts`, `.mpg`, `.mpeg` → Use concat protocol (Method 1)
+- `.mp4`, `.mov`, `.mkv` → Use concat demuxer (Method 2)
+- Different codecs/resolutions → Use concat filter (Method 3)
 
 **Speed up/slow down:**
 ```bash
@@ -369,6 +397,8 @@ When a user requests video/audio processing:
 7. **Suggest optimizations** if applicable
 
 For complex workflows, break down into steps and explain each one.
+
+**For video concatenation:** Use process substitution with printf when possible to avoid temporary files (see Method 2 in concatenate section). Fall back to temporary list.txt only if needed.
 
 ## Examples
 
