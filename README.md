@@ -9,6 +9,10 @@ A comprehensive Claude Skill for video and audio processing using ffmpeg. This s
 
 The FFmpeg Toolkit skill teaches Claude how to perform professional video and audio processing tasks using ffmpeg. Once installed, Claude will automatically recognize video/audio processing requests and apply the appropriate ffmpeg commands.
 
+> **Note:** This skill was developed for research purposes to explore Claude Skills capabilities. Claude already has knowledge of ffmpeg and can handle common video/audio tasks without this skill. This skill provides optimized recipes and platform-specific presets that may be useful for advanced use cases.
+>
+> **Tip:** If Claude doesn't automatically use this skill, you can explicitly ask: "Can you use the ffmpeg-usage skill for this task?"
+
 **Supported Operations:**
 - 🎬 Format conversion (MP4, WebM, MOV, AVI, etc.)
 - 📐 Resolution scaling and aspect ratio adjustment

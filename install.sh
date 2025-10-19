@@ -178,7 +178,7 @@ print_next_steps() {
     echo ""
     echo "Next steps:"
     echo ""
-    echo "1. Restart Claude to load the skill"
+    echo "1. Restart Claude Code to load the skill"
     echo "2. Try: 'Convert this video to MP4'"
     echo "3. Or: 'Create a GIF from this video'"
     echo ""
