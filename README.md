@@ -52,21 +52,24 @@ ffmpeg -version
 
 ## 🚀 Installation
 
-### For Claude Desktop
+### For Claude Desktop & claude.ai
+
+Skills are automatically synced between Claude Desktop and claude.ai. Upload once to use on both platforms!
 
 1. **Download the latest release:**
    - Go to [Releases](https://github.com/ychoi-kr/claude-ffmpeg-skill/releases)
    - Download `ffmpeg-toolkit.zip`
 
-2. **Upload to Claude Desktop:**
-   - Open Claude Desktop
-   - Go to Settings > Capabilities > Skills
+2. **Upload the Skill:**
+   - In Claude Desktop or claude.ai, go to Settings > Capabilities > Skills
    - Click "Upload Skill"
    - Select the downloaded `ffmpeg-toolkit.zip` file
 
 3. **Start using:**
-   - No restart needed
+   - If you uploaded via claude.ai and have Claude Desktop open, restart Claude Desktop to see the Skill
    - Just ask Claude to process videos!
+
+**Note:** Custom Skills require a Pro, Max, Team, or Enterprise plan.
 
 ### For Claude Code
 
@@ -82,14 +85,6 @@ cp -r claude-ffmpeg-skill ~/.claude/skills/ffmpeg-toolkit
 ```bash
 curl -sSL https://raw.githubusercontent.com/ychoi-kr/claude-ffmpeg-skill/main/install.sh | bash
 ```
-
-### For claude.ai
-
-1. Download `ffmpeg-toolkit.zip` from [Releases](https://github.com/ychoi-kr/claude-ffmpeg-skill/releases)
-2. Go to Settings > Features
-3. Upload the ZIP file
-
-**Note:** Custom Skills on claude.ai are available on Pro, Max, Team, and Enterprise plans.
 
 ## 💡 Usage
 
