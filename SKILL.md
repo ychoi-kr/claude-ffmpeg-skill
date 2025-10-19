@@ -1,8 +1,6 @@
 ---
 name: ffmpeg-toolkit
 description: Video/audio processing with ffmpeg. Use for conversions, resizing, GIFs, audio extraction, compression, subtitles, or when user mentions YouTube, Instagram, TikTok optimization.
-version: 1.0.0
-dependencies: ffmpeg>=4.0, ffprobe (optional)
 ---
 
 # FFmpeg Toolkit
@@ -10,6 +8,9 @@ dependencies: ffmpeg>=4.0, ffprobe (optional)
 ## Overview
 
 This Skill provides comprehensive video and audio processing capabilities using ffmpeg. It includes battle-tested commands and workflows for common multimedia tasks, platform-specific optimizations, and best practices for quality and file size management.
+
+**Version:** 1.0.0
+**Requirements:** ffmpeg >= 4.0, ffprobe (optional but recommended)
 
 Claude should use this Skill whenever users mention video or audio processing tasks, format conversions, social media optimization, or multimedia editing.
 
