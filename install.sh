@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# FFmpeg Toolkit Skill - Installation Script
-# This script installs the ffmpeg-toolkit skill for Claude
+# ffmpeg Usage Skill - Installation Script
+# This script installs the ffmpeg-usage skill for Claude
 
 set -e
 
@@ -22,7 +22,7 @@ NC='\033[0m' # No Color
 print_header() {
     echo ""
     echo -e "${BLUE}╔════════════════════════════════════════╗${NC}"
-    echo -e "${BLUE}║   FFmpeg Toolkit Skill - Installer    ║${NC}"
+    echo -e "${BLUE}║   ffmpeg Usage Skill - Installer      ║${NC}"
     echo -e "${BLUE}╚════════════════════════════════════════╝${NC}"
     echo ""
 }
@@ -89,7 +89,7 @@ create_skills_directory() {
 # Check for existing installation
 check_existing() {
     if [ -d "$INSTALL_DIR" ]; then
-        print_warning "FFmpeg Toolkit skill is already installed"
+        print_warning "ffmpeg Usage skill is already installed"
         echo ""
         read -p "Overwrite existing installation? (y/N): " -n 1 -r
         echo
@@ -236,7 +236,7 @@ main() {
 # Handle script arguments
 case "${1:-}" in
     --help|-h)
-        echo "FFmpeg Toolkit Skill Installer"
+        echo "ffmpeg Usage Skill Installer"
         echo ""
         echo "Usage: $0 [OPTIONS]"
         echo ""
@@ -249,7 +249,7 @@ case "${1:-}" in
     --uninstall)
         if [ -d "$INSTALL_DIR" ]; then
             rm -rf "$INSTALL_DIR"
-            print_success "FFmpeg Toolkit skill uninstalled"
+            print_success "ffmpeg Usage skill uninstalled"
         else
             print_warning "Skill not found"
         fi
