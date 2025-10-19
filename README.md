@@ -52,39 +52,44 @@ ffmpeg -version
 
 ## 🚀 Installation
 
-### Method 1: Manual Installation (Recommended)
+### For Claude Desktop
 
-1. **Clone or download this repository:**
-   ```bash
-   git clone https://github.com/ychoi-kr/claude-ffmpeg-skill.git
-   ```
+1. **Download the latest release:**
+   - Go to [Releases](https://github.com/ychoi-kr/claude-ffmpeg-skill/releases)
+   - Download `ffmpeg-toolkit.zip`
 
-2. **Copy to Claude skills directory:**
-   ```bash
-   # Create skills directory if it doesn't exist
-   mkdir -p ~/.claude/skills
+2. **Upload to Claude Desktop:**
+   - Open Claude Desktop
+   - Go to Settings > Capabilities > Skills
+   - Click "Upload Skill"
+   - Select the downloaded `ffmpeg-toolkit.zip` file
 
-   # Copy the skill
-   cp -r claude-ffmpeg-skill ~/.claude/skills/ffmpeg-toolkit
-   ```
+3. **Start using:**
+   - No restart needed
+   - Just ask Claude to process videos!
 
-3. **Restart Claude** to load the skill
+### For Claude Code
 
-### Method 2: Claude Code Plugin (Coming Soon)
+**Method 1: Git Clone (Recommended)**
 
 ```bash
-# Add marketplace
-/plugin marketplace add yourusername/ffmpeg-skills-marketplace
-
-# Install the skill
-/plugin install ffmpeg-toolkit@ffmpeg-skills
+git clone https://github.com/ychoi-kr/claude-ffmpeg-skill.git
+cp -r claude-ffmpeg-skill ~/.claude/skills/ffmpeg-toolkit
 ```
 
-### Method 3: Quick Install Script
+**Method 2: Quick Install Script**
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/ychoi-kr/claude-ffmpeg-skill/main/install.sh | bash
 ```
+
+### For claude.ai
+
+1. Download `ffmpeg-toolkit.zip` from [Releases](https://github.com/ychoi-kr/claude-ffmpeg-skill/releases)
+2. Go to Settings > Features
+3. Upload the ZIP file
+
+**Note:** Custom Skills on claude.ai are available on Pro, Max, Team, and Enterprise plans.
 
 ## 💡 Usage
 
