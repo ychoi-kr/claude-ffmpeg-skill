@@ -1,11 +1,31 @@
 ---
 name: ffmpeg-toolkit
-description: Comprehensive video and audio processing using ffmpeg. Handles format conversion, resolution scaling, GIF creation, audio extraction/merging, subtitle processing, and video editing. Activates when user mentions video/audio processing, conversion, GIF creation, extract audio, merge videos, add subtitles, resize video, compress video, or platform names like YouTube, Instagram, TikTok.
+description: Video/audio processing with ffmpeg. Use for conversions, resizing, GIFs, audio extraction, compression, subtitles, or when user mentions YouTube, Instagram, TikTok optimization.
+version: 1.0.0
+dependencies: ffmpeg>=4.0, ffprobe (optional)
 ---
 
 # FFmpeg Toolkit
 
-A comprehensive skill for video and audio processing using ffmpeg. This skill provides battle-tested commands and workflows for common multimedia processing tasks.
+## Overview
+
+This Skill provides comprehensive video and audio processing capabilities using ffmpeg. It includes battle-tested commands and workflows for common multimedia tasks, platform-specific optimizations, and best practices for quality and file size management.
+
+Claude should use this Skill whenever users mention video or audio processing tasks, format conversions, social media optimization, or multimedia editing.
+
+## When to Apply
+
+Use this Skill when the user requests:
+- Video format conversion (MP4, WebM, MOV, etc.)
+- Resolution scaling or aspect ratio changes
+- GIF creation from videos
+- Audio extraction or format conversion
+- Video editing (trim, merge, speed adjustment, rotation)
+- Subtitle processing (burn-in, soft subs, extraction)
+- Video compression or optimization
+- Platform-specific formatting (YouTube, Instagram, TikTok, Twitter)
+- Thumbnail or frame extraction
+- Batch processing of video/audio files
 
 ## Prerequisites
 
