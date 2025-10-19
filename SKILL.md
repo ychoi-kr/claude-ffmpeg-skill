@@ -1,5 +1,5 @@
 ---
-name: ffmpeg-toolkit
+name: ffmpeg-usage
 description: ffmpeg recipes and best practices: convert, concatenate, merge, resize, compress, GIF creation, audio extraction, subtitles, optimize for social platforms.
 ---
 

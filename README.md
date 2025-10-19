@@ -58,12 +58,12 @@ Skills are automatically synced between Claude Desktop and claude.ai. Upload onc
 
 1. **Download the latest release:**
    - Go to [Releases](https://github.com/ychoi-kr/claude-ffmpeg-skill/releases)
-   - Download `ffmpeg-toolkit.zip`
+   - Download `ffmpeg-usage.zip`
 
 2. **Upload the Skill:**
    - In Claude Desktop or claude.ai, go to Settings > Capabilities > Skills
    - Click "Upload Skill"
-   - Select the downloaded `ffmpeg-toolkit.zip` file
+   - Select the downloaded `ffmpeg-usage.zip` file
 
 3. **Start using:**
    - If you uploaded via claude.ai and have Claude Desktop open, restart Claude Desktop to see the Skill
@@ -77,7 +77,7 @@ Skills are automatically synced between Claude Desktop and claude.ai. Upload onc
 
 ```bash
 git clone https://github.com/ychoi-kr/claude-ffmpeg-skill.git
-cp -r claude-ffmpeg-skill ~/.claude/skills/ffmpeg-toolkit
+cp -r claude-ffmpeg-skill ~/.claude/skills/ffmpeg-usage
 ```
 
 **Method 2: Quick Install Script**

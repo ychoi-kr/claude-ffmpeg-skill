@@ -5,7 +5,7 @@
 
 set -e
 
-SKILL_NAME="ffmpeg-toolkit"
+SKILL_NAME="ffmpeg-usage"
 SKILLS_DIR="$HOME/.claude/skills"
 INSTALL_DIR="$SKILLS_DIR/$SKILL_NAME"
 REPO_URL="https://github.com/ychoi-kr/claude-ffmpeg-skill.git"
