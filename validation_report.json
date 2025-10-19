@@ -1,0 +1,11 @@
+{
+  "ffmpeg_installed": true,
+  "ffprobe_installed": true,
+  "skill_installed": true,
+  "test_passed": true,
+  "system": {
+    "os": "Darwin",
+    "release": "23.6.0",
+    "architecture": "arm64"
+  }
+}
